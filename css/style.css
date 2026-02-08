@@ -1,0 +1,294 @@
+/* ==================================================
+   Global Styles
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0d0f19;
+  color: #f1f1f1;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ==================================================
+   Navbar
+================================================== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(13, 15, 25, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.navbar .logo span {
+  color: #00bfff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+.lang-btn {
+  background: #00bfff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* ==================================================
+   Hero Section
+================================================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(13,15,25,0.😎, rgba(13,15,25,0.9)), url('../assets/hero-bg.jpg') no-repeat center center/cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.hero-buttons .btn {
+  padding: 0.7rem 1.5rem;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #00bfff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #0091ea;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.btn.secondary:hover {
+  background: #ffd700;
+  color: #0d0f19;
+}
+
+/* ==================================================
+   Sections
+================================================== */
+.section {
+  padding: 6rem 0;
+}
+
+.section.dark {
+  background-color: #11121c;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* ==================================================
+   Voice Demos Grid
+================================================== */
+.demos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.demo-card {
+  background-color: #1a1c2b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.demo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,191,255,0.3);
+}
+
+.demo-card h3 {
+  margin-bottom: 1rem;
+  color: #00bfff;
+}
+
+.demo-card p {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+/* ==================================================
+   Services Grid
+================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.service-box {
+  background-color: #1a1c2b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255,215,0,0.3);
+}
+
+/* ==================================================
+   About Section
+================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.about-grid p {
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.about-ar {
+  background-color: #1a1c2b;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: right;
+}
+
+/* ==================================================
+   Contact Section
+================================================== */
+.contact-box {
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+/* ==================================================
+   Footer
+================================================== */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #11121c;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ==================================================
+   Responsive
+================================================== */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
